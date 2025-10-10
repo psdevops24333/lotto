@@ -1,0 +1,18 @@
+{
+  "name": "lotto-app",
+  "version": "0.1.0",
+  "homepage": "https://psdevops24333.github.io/lotto",
+  "private": true,
+  "dependencies": {
+    // ... dependencies ของคุณจะอยู่ตรงนี้
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  // ... ส่วนที่เหลือ
+}
