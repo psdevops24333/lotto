@@ -1,0 +1,20 @@
+{
+  "name": "LOTTO",
+  "version": "0.1.0",
+  // เพิ่มบรรทัดนี้ โดยเปลี่ยน <Your-GitHub-Username> และ <Your-Repo-Name>
+  "homepage": "https://psdevops24333.github.io/lotto",
+  "private": true,
+  "dependencies": {
+    // ...
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    // เพิ่ม 2 บรรทัดนี้เข้าไป
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  // ...
+}
