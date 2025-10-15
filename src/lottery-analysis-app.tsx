@@ -5,6 +5,16 @@ const LotteryAnalysisApp = () => {
   const [activeTab, setActiveTab] = useState('thai');
   const [analysisType, setAnalysisType] = useState('ai');
   const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const dateString = event.target.value;
+  if (dateString) {
+    // แปลง string 'YYYY-MM-DD' กลับเป็น object Date
+    const [year, month, day] = dateString.split('-').map(Number);
+    // เดือนใน object Date เริ่มจาก 0 (มกราคม = 0) จึงต้อง -1
+    setSelectedDate(new Date(year, month - 1, day)); 
+  }
+};
   
   // Sample data for Thai lottery
   const thaiStats = {
