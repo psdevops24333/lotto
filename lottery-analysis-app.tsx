@@ -82,7 +82,7 @@ const LotteryAnalysisApp = () => {
             </div>
             <div className="bg-white text-purple-600 px-4 py-2 rounded-lg flex items-center gap-2">
               <Calendar size={20} />
-              <span className="font-semibold">งวดถัดไป: 10/10/2025</span>
+              <span className="font-semibold">งวดถัดไป: 15/10/2025</span>
             </div>
           </div>
         </div>
