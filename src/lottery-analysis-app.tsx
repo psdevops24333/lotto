@@ -91,10 +91,22 @@ const LotteryAnalysisApp = () => {
                 <p className="text-purple-200">วิเคราะห์ข้อมูล 10 ปี และพยากรณ์เลขเด็ดด้วย AI</p>
               </div>
             </div>
-            <div className="bg-white text-purple-600 px-4 py-2 rounded-lg flex items-center gap-2">
-              <Calendar size={20} />
-              <span className="font-semibold">งวดถัดไป: 10/10/2025</span>
-            </div>
+              <div className="bg-white text-purple-600 px-4 py-2 rounded-lg flex items-center gap-2">
+                <Calendar size={20} />
+              <div>
+                <label htmlFor="lotto-date" className="text-xs text-gray-500">
+              เลือกงวดวันที่:
+            </label>
+            <input
+            type="date"
+            id="lotto-date"
+            // แปลง object Date เป็น string 'YYYY-MM-DD' เพื่อให้ input แสดงผลได้
+            value={selectedDate.toISOString().split('T')[0]} 
+            onChange={handleDateChange}
+            className="font-semibold bg-transparent focus:outline-none p-1"
+        />
+  </div>
+</div>
           </div>
         </div>
       </div>
