@@ -78,38 +78,22 @@ const LotteryAnalysisApp = () => {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6 shadow-lg">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <BarChart3 size={40} className="animate-pulse" />
-              <div>
-                <h1 className="text-3xl font-bold">ระบบวิเคราะห์หวยรัฐบาล</h1>
-                <p className="text-purple-200">วิเคราะห์ข้อมูล 10 ปี และพยากรณ์เลขเด็ดด้วย AI</p>
-              </div>
-            </div>
-              <div className="bg-white text-purple-600 px-4 py-2 rounded-lg flex items-center gap-2">
-                <Calendar size={20} />
-              <div>
-                <label htmlFor="lotto-date" className="text-xs text-gray-500">
-              เลือกงวดวันที่:
-            </label>
-            <input
-            type="date"
-            id="lotto-date"
-            // แปลง object Date เป็น string 'YYYY-MM-DD' เพื่อให้ input แสดงผลได้
-            value={selectedDate.toISOString().split('T')[0]} 
-            onChange={handleDateChange}
-            className="font-semibold bg-transparent focus:outline-none p-1"
-        />
+<div className="bg-white text-purple-600 px-4 py-2 rounded-lg flex items-center gap-2">
+  <Calendar size={20} />
+  <div>
+    <label htmlFor="lotto-date" className="text-xs text-gray-500">
+      เลือกงวดวันที่:
+    </label>
+    <input
+      type="date"
+      id="lotto-date"
+      // แปลง object Date เป็น string 'YYYY-MM-DD' เพื่อให้ input แสดงผลได้
+      value={selectedDate.toISOString().split('T')[0]} 
+      onChange={handleDateChange}
+      className="font-semibold bg-transparent focus:outline-none p-1"
+    />
   </div>
 </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto p-6">
