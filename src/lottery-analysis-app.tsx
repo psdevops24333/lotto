@@ -4,7 +4,8 @@ import { BarChart3, TrendingUp, Calculator, Sparkles, Calendar, RefreshCw, Datab
 const LotteryAnalysisApp = () => {
   const [activeTab, setActiveTab] = useState('thai');
   const [analysisType, setAnalysisType] = useState('ai');
-
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  
   // Sample data for Thai lottery
   const thaiStats = {
     twoDigit: { last: 60, freq: 23 },
